@@ -1,6 +1,19 @@
 # sf_train
 Text Adventure for the Soulforge Train story
 
+To build and run this project in the terminal after pulling the repo, use the following command:
+
+
+`cargo build && cargo run`
+
+
+This command will compile the project with Cargo and then execute it, allowing you to run the program.
+
+By default, you start at (-7, -7), the center square of the locations we have in locations.json. Feel free to look around!
+
+    
+# Commands
+    
     Move Command // TODO
         Description: Move to a different location.
         Usage: move or m [direction]
