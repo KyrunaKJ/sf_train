@@ -11,6 +11,8 @@ This command will compile the project with Cargo and then execute it, allowing y
 
 By default, you start at (-7, -7), the center square of the locations we have in locations.json. Feel free to look around!
 
+(The train is coming)
+
     
 # Commands
     
