@@ -1,0 +1,38 @@
+{
+    "(-8, -8)": {
+        "name": "Asteroid Valley",
+        "description": "A valley located on a floating asteroid."
+    },
+    "(-8, -7)": {
+        "name": "Valley of Winds",
+        "description": "A deep valley with strong winds, ideal for surveying."
+    },
+    "(-8, -6)": {
+        "name": "Floating Islands",
+        "description": "A group of floating islands with mysterious ruins."
+    },
+    "(-7, -8)": {
+        "name": "Asteroid Settlement",
+        "description": "A settlement on a floating asteroid."
+    },
+    "(-7, -7)": {
+    "name": "Clifftop Monastery",
+    "description": "Home to the Cliffskippers, surveyors who coordinate trips through valleys."
+    },
+    "(-7, -6)": {
+        "name": "Ravine of Echoes",
+        "description": "A deep ravine with echoing sounds."
+    },
+    "(-6, -8)": {
+        "name": "Mountain Peak",
+        "description": "A high mountain peak with breathtaking views."
+    },
+    "(-6, -7)": {
+        "name": "Desert Oasis",
+        "description": "An oasis in the middle of a vast desert."
+    },
+    "(-6, -6)": {
+        "name": "Forest Clearing",
+        "description": "A peaceful clearing in a dense forest."
+    }
+}
