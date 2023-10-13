@@ -5,14 +5,13 @@ extern crate serde_json;
 extern crate clearscreen;
 use std::fs::File;
 use std::io::Read;
-use rustyline::DefaultEditor;
-use std::collections::HashMap;
 use serde::Deserialize;
+use std::collections::HashMap;
+use rustyline::DefaultEditor;
 
 trait Game {
     fn new() -> Self where Self:Sized;
     fn play(&mut self) -> Result<(), std::io::Error>;
-    fn cleanup(&mut self);
 }
 
 trait Commands {
@@ -73,10 +72,16 @@ impl<G: Game> InputManager<G>{
     }
 }
 
+struct TextAdventure {
+    input_manager: InputManager<TextAdventure>,
+    location_manager: LocationManager,
+    play_loop: bool,
+}
+
 impl LocationManager {
     fn new() -> Self {
         let all_locations = Self::load_locations_from_json().unwrap();
-        let current_position = (-7, -7);
+        let current_position = (-7, -7); // DEFAULT CENTER OF OUR SQUARE
         
         LocationManager { 
             current_position,
@@ -113,11 +118,6 @@ impl LocationManager {
     }
 }
 
-struct TextAdventure {
-    input_manager: InputManager<TextAdventure>,
-    location_manager: LocationManager,
-    play_loop: bool,
-}
 
 impl Commands for TextAdventure {
     fn quit(&mut self, args: Option<Vec<String>>) -> Result<(), std::io::Error> { 
@@ -137,7 +137,7 @@ impl Commands for TextAdventure {
             println!("You see you're at the '{}'", self.location_manager.get_current_location_name());
             return Ok(())
         }
-        
+
         let arg = self.expand_abbreviation(args[1].as_str()).unwrap();
         println!("You look {}", arg);
         let pos = &self.location_manager.current_position;
@@ -236,10 +236,6 @@ impl Game for TextAdventure {
 
         Ok(())
     }
-
-    fn cleanup(&mut self) {
-        
-    }
 }
 
 impl TextAdventure {
@@ -303,7 +299,6 @@ impl MyApplication {
 
     fn run(&mut self) -> Result<(), std::io::Error> {
         self.game.play()?;
-        self.game.cleanup();
         Ok(())
     }
 }
