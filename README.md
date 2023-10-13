@@ -1,7 +1,7 @@
 # sf_train
 Text Adventure for the Soulforge Train story
 
-    Move Command
+    Move Command // TODO
         Description: Move to a different location.
         Usage: move or m [direction]
 
@@ -9,31 +9,31 @@ Text Adventure for the Soulforge Train story
         Description: Examine your surroundings.
         Usage: look or l [direction]
 
-    Interact
+    Interact // TODO
         Description: Interact with objects or characters in the game.
         Usage: interact or i
 
-    Inventory
+    Inventory // TODO
         Description: View your inventory.
         Usage: inventory or inv or I
 
-    Map
+    Map // TODO
         Description: Display the game map.
         Usage: map or m
 
-    Status
+    Status // TODO
         Description: View your character's status.
         Usage: status or stats
 
-    Save
+    Save // TODO
         Description: Save your game progress.
         Usage: save or s or sv
 
-    Load
+    Load // TODO
         Description: Load a saved game.
         Usage: load or ld
 
-    Help
+    Help // TODO
         Description: Get help or information about the game.
         Usage: help or h or ?
 
